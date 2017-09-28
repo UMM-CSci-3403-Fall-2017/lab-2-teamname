@@ -5,6 +5,8 @@
 
 int main(int argc, char* argv[]) {
   char* line;
+
+  //store disemvowel output in a var so we can free it and avoid mem leak
   char* holder;
   size_t size;
 
@@ -16,5 +18,6 @@ int main(int argc, char* argv[]) {
     printf("%s\n", holder);
     free(holder);
   }
+
   free(line);
 }
